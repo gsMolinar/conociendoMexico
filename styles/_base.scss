@@ -1,0 +1,11 @@
+$mainMargin: 1rem 8%;
+$greenColor:#48ff48;    
+$whiteColor:#d8d8d8;
+$redColor:#7d0e0e;
+$bgColor:#181818;
+@mixin breakpoint1 {
+    @media screen and (max-width:62rem) {@content};
+}
+@mixin breakpoint2 {
+    @media screen and (max-width:36rem) {@content};
+}

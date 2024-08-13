@@ -1,0 +1,268 @@
+@charset "UTF-8";
+body {
+  line-height: 1.2;
+  font-family: "Manrope", sans-serif;
+  background-color: #181818;
+  color: #f1f1f1;
+}
+body h2 {
+  font-size: clamp(1.3rem, 1.6vw, 1.5rem);
+  font-weight: 700;
+}
+body h3 {
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  font-weight: 600;
+}
+body header {
+  background-color: #111;
+  padding: 1rem 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body header div img {
+  height: clamp(1.6rem, 1.8vw, 1.9rem);
+}
+body header h1 {
+  font-size: clamp(1.6rem, 1.8vw, 1.9rem);
+  font-weight: 800;
+}
+body header nav a {
+  margin: 0px 2px;
+  color: #f1f1f1;
+}
+body .mainIndex .banner {
+  background-image: url("https://visitmexico.com/static/media/videos360.3fb857be2b4fae03c3a3.png");
+}
+body .mainIndex .banner h2 {
+  padding-top: 9vw;
+  padding-left: 8%;
+  font-size: clamp(1.8rem, 2.3vw, 2.4rem);
+}
+body .mainIndex .banner p {
+  padding-left: 8%;
+  padding-bottom: 9vw;
+  font-size: clamp(1.2rem, 1.3vw, 1.4rem);
+}
+body .mainIndex .temes {
+  margin: 2rem 8%;
+}
+body .mainIndex .temes .temes__header h2 {
+  font-size: clamp(1.6rem, 1.6vw, 1.9rem);
+  font-weight: 800;
+}
+body .mainIndex .temes a {
+  color: #f1f1f1;
+}
+body .mainIndex .temes .temes__Container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Ajusta el número de columnas según tus necesidades */
+  gap: 1rem; /* Agrega espacio entre artículos */
+}
+@media screen and (max-width: 36rem) {
+  body .mainIndex .temes .temes__Container {
+    grid-template-columns: 1fr;
+  }
+}
+body .mainIndex .temes .temes__Container article {
+  background-color: #111;
+  display: flex;
+  flex-direction: column; /* Cambia a columna para mejor disposición */
+  align-items: center;
+  border: solid;
+  aspect-ratio: 3/6;
+  justify-content: center;
+  position: relative; /* Necesario para posicionar la imagen */
+  overflow: hidden; /* Oculta el contenido que se sale */
+  transition: transform 0.2s ease; /* Agrega transición para el efecto */
+}
+@media screen and (max-width: 36rem) {
+  body .mainIndex .temes .temes__Container article {
+    aspect-ratio: 2/1;
+  }
+}
+body .mainIndex .temes .temes__Container article h3 {
+  color: #f4ddee;
+  background-color: rgba(17, 17, 17, 0.5058823529);
+  writing-mode: vertical-lr;
+  font-size: clamp(2rem, 2.7vw, 2.8rem);
+  font-weight: 800;
+  text-align: center; /* Centra el texto vertical */
+  position: absolute; /* Posiciona el h3 */
+  top: 50%; /* Ajusta la posición vertical */
+  left: 50%; /* Ajusta la posición horizontal */
+  transform: translate(-50%, -50%); /* Centra el h3 */
+  z-index: 1; /* Asegúrate de que el h3 esté por encima de la imagen */
+}
+@media screen and (max-width: 36rem) {
+  body .mainIndex .temes .temes__Container article h3 {
+    writing-mode: horizontal-tb;
+  }
+}
+body .mainIndex .temes .temes__Container article img {
+  width: 100%;
+  height: 100%; /* Ajusta la altura de la imagen */
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute; /* Posiciona la imagen */
+  top: 0;
+  left: 0;
+  opacity: 0; /* Oculta la imagen por defecto */
+  transition: opacity 0.3s ease; /* Agrega transición para la opacidad */
+}
+body .mainIndex .temes .temes__Container article:hover {
+  transform: scale(1.2); /* Amplía el artículo al hacer hover */
+}
+body .mainIndex .temes .temes__Container article:hover article {
+  transform: scale(0.8); /* Reduce el tamaño de los demás */
+  opacity: 0.5; /* Reduce la opacidad de los demás */
+}
+body .mainIndex .temes .temes__Container article:hover img {
+  opacity: 1; /* Muestra la imagen al hacer hover */
+}
+body .mainHistory {
+  padding: 1rem 8%;
+}
+body .mainHistory .timeLine ul {
+  list-style-type: circle;
+}
+body .mainHistory .timeLine ul li {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #111;
+  border-radius: 5px;
+  border: solid;
+}
+body .mainHistory .timeLine ul li a {
+  color: #f1f1f1;
+}
+body .mainGeography {
+  margin: 1rem 8%;
+}
+body .mainGeography .mapSection {
+  display: grid;
+  grid-template-columns: 68% 32%;
+  align-items: center;
+  justify-items: center;
+}
+@media screen and (max-width: 62rem) {
+  body .mainGeography .mapSection {
+    grid-template-columns: 1fr;
+  }
+}
+body .mainGeography .mapSection .mapSection__info {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #111;
+  border-radius: 5px;
+  border: solid;
+  display: none;
+}
+body .mainGeography .mapSection .mapSection__info.show {
+  display: block;
+}
+body .mainGeography .mapSection svg {
+  width: 100%;
+  height: auto;
+}
+body .mainGeography .mapSection svg path:hover {
+  fill: #393939;
+}
+body .mainGeography .listContainer .listItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .mainCulture {
+  padding: 1rem 8%;
+}
+body .mainCulture img {
+  width: 60%;
+}
+body .mainArt {
+  padding: 1rem 8%;
+}
+body footer {
+  background-color: #111;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+body footer nav {
+  display: flex;
+  align-items: center;
+}
+body footer nav .navFooter__logo {
+  width: 4rem;
+}
+body footer nav .navFooter__logo img {
+  width: 3rem;
+}
+body footer nav .navFooter__link {
+  margin: 0px 10px;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+  font-weight: 700;
+  color: #d8d8d8;
+  text-decoration: none;
+}
+body footer nav .navFooter__link:hover {
+  text-decoration: underline;
+}
+
+.slider {
+  position: relative;
+  width: 65%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  padding: 1rem;
+  background-color: #111;
+  border-radius: 1rem;
+}
+.slider__slide {
+  display: none;
+  text-align: center;
+}
+.slider__slide.hidden {
+  display: none;
+}
+.slider__slide img {
+  width: 100%;
+  aspect-ratio: 5/3;
+}
+.slider__slide p {
+  margin: 10px 0;
+}
+.slider .slider__controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1rem; /* Para compensar el padding del contenedor */
+}
+.slider .slider__controls button {
+  background-color: #393939;
+  border: none;
+  color: #d8d8d8;
+  padding: 10px;
+  cursor: pointer;
+  font-size: clamp(1rem, 1vw, 1.1rem);
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 40%;
+  width: 40px;
+  height: 40px;
+}
+.slider .slider__controls button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}/*# sourceMappingURL=main.css.map */
