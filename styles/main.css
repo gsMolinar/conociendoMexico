@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   line-height: 1.2;
   font-family: "Manrope", sans-serif;
@@ -32,9 +31,75 @@ body header h1 {
   font-size: clamp(1.6rem, 1.8vw, 1.9rem);
   font-weight: 800;
 }
+body header nav {
+  display: block;
+}
+@media screen and (max-width: 36rem) {
+  body header nav {
+    display: none;
+  }
+}
 body header nav a {
   margin: 0px 2px;
   color: #f1f1f1;
+}
+body header .iconMenu {
+  display: none;
+  height: clamp(1.7rem, 1.8vw, 1.9rem);
+}
+@media screen and (max-width: 36rem) {
+  body header .iconMenu {
+    display: block;
+  }
+}
+body header .iconMenu img {
+  height: clamp(1.7rem, 1.8vw, 1.9rem);
+}
+body header .menu {
+  z-index: 999;
+  display: none;
+  width: 100%;
+  position: absolute;
+  right: 0%;
+  top: 58px;
+  background-color: #111111;
+  box-shadow: 19px 1px 22px -15px rgba(0, 0, 0, 0.29);
+  transition: all 0.25s ease;
+  height: auto;
+}
+body header .menu.show {
+  display: block;
+}
+body header .menu .menuHeader {
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+}
+body header .menu .menuHeader h2 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 25px 0px;
+}
+body header .menu .menuHeader i {
+  cursor: pointer;
+  color: #c4c0c0;
+  background-color: #333;
+  padding: 4px;
+  border-radius: 50%;
+}
+body header .menu .menu__nav {
+  display: block;
+}
+body header .menu .menu__nav a {
+  color: #d2cece;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 24px;
+}
+body header .menu .menu__nav .mainLink {
+  font-weight: 600;
 }
 body .mainIndex .banner {
   background-image: url("https://visitmexico.com/static/media/videos360.3fb857be2b4fae03c3a3.png");
@@ -62,8 +127,7 @@ body .mainIndex .temes a {
 body .mainIndex .temes .temes__Container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* Ajusta el número de columnas según tus necesidades */
-  gap: 1rem; /* Agrega espacio entre artículos */
+  gap: 1rem;
 }
 @media screen and (max-width: 36rem) {
   body .mainIndex .temes .temes__Container {
@@ -73,14 +137,14 @@ body .mainIndex .temes .temes__Container {
 body .mainIndex .temes .temes__Container article {
   background-color: #111;
   display: flex;
-  flex-direction: column; /* Cambia a columna para mejor disposición */
+  flex-direction: column;
   align-items: center;
   border: solid;
   aspect-ratio: 3/6;
   justify-content: center;
-  position: relative; /* Necesario para posicionar la imagen */
-  overflow: hidden; /* Oculta el contenido que se sale */
-  transition: transform 0.2s ease; /* Agrega transición para el efecto */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
 }
 @media screen and (max-width: 36rem) {
   body .mainIndex .temes .temes__Container article {
@@ -93,12 +157,12 @@ body .mainIndex .temes .temes__Container article h3 {
   writing-mode: vertical-lr;
   font-size: clamp(2rem, 2.7vw, 2.8rem);
   font-weight: 800;
-  text-align: center; /* Centra el texto vertical */
-  position: absolute; /* Posiciona el h3 */
-  top: 50%; /* Ajusta la posición vertical */
-  left: 50%; /* Ajusta la posición horizontal */
-  transform: translate(-50%, -50%); /* Centra el h3 */
-  z-index: 1; /* Asegúrate de que el h3 esté por encima de la imagen */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 @media screen and (max-width: 36rem) {
   body .mainIndex .temes .temes__Container article h3 {
@@ -107,24 +171,24 @@ body .mainIndex .temes .temes__Container article h3 {
 }
 body .mainIndex .temes .temes__Container article img {
   width: 100%;
-  height: 100%; /* Ajusta la altura de la imagen */
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute; /* Posiciona la imagen */
+  position: absolute;
   top: 0;
   left: 0;
-  opacity: 0; /* Oculta la imagen por defecto */
-  transition: opacity 0.3s ease; /* Agrega transición para la opacidad */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 body .mainIndex .temes .temes__Container article:hover {
-  transform: scale(1.2); /* Amplía el artículo al hacer hover */
+  transform: scale(1.2);
 }
 body .mainIndex .temes .temes__Container article:hover article {
-  transform: scale(0.8); /* Reduce el tamaño de los demás */
-  opacity: 0.5; /* Reduce la opacidad de los demás */
+  transform: scale(0.8);
+  opacity: 0.5;
 }
 body .mainIndex .temes .temes__Container article:hover img {
-  opacity: 1; /* Muestra la imagen al hacer hover */
+  opacity: 1;
 }
 body .mainHistory {
   padding: 1rem 8%;

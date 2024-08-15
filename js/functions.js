@@ -1,4 +1,14 @@
 // Selecciona todos los elementos con la clase "abtnTest"
+const iconMenu = document.querySelector(".iconMenu");
+const menu = document.querySelector(".menu");
+const closeIcon= document.querySelector(".closeIcon");
+iconMenu.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
+closeIcon.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
+
 const elements = document.querySelectorAll("path"); 
 elements.forEach(element => {
   element.addEventListener("mouseover", function (event){
@@ -6,8 +16,6 @@ elements.forEach(element => {
     console.log(elementId);
   });
 });
-//
-
 
 elements.forEach(element => {
   element.addEventListener("mouseover", function (event){
@@ -35,7 +43,7 @@ elements.forEach(element => {
   });
 });
 
-//container temes
+
 const articles = document.querySelectorAll('.temes__Container article');
 
 articles.forEach(article => {
@@ -58,7 +66,6 @@ articles.forEach(article => {
     });
 });
 
-//
 function createSlider(sliderId, prevButtonId, nextButtonId) {
   let slideIndex = 1;
   const slides = document.querySelectorAll(`#${sliderId} .slider__slide`);
