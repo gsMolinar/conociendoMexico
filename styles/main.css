@@ -101,6 +101,62 @@ body header .menu .menu__nav a {
 body header .menu .menu__nav .mainLink {
   font-weight: 600;
 }
+body header .container {
+  display: flex;
+  align-items: center;
+}
+body header .switch {
+  position: relative;
+  display: inline-block;
+  width: 84px;
+  height: 26px;
+}
+body header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body header .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #086283;
+  transition: 0.4s;
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+body header .switch .slider.round {
+  border-radius: 50px;
+}
+body header .switch .slider .icon {
+  height: 100%;
+}
+body header .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 0px;
+  background-color: #d9e6ed;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+body header .switch input:checked + .slider {
+  background-color: #232827;
+}
+body header .switch input:focus + .slider {
+  box-shadow: 0 0 1px #232827;
+}
+body header .switch input:checked + .slider:before {
+  transform: translateX(32px);
+}
 body .mainIndex .banner {
   background-image: url("https://visitmexico.com/static/media/videos360.3fb857be2b4fae03c3a3.png");
 }

@@ -1,3 +1,12 @@
+// Variables
+$slider-width: 84px; 
+$slider-height: 26px; 
+$slider-border-radius: 26px;
+$slider-color: #086283;
+$slider-active-color: #232827;
+$slider-hover-color: #b3b3b3;
+$slider-checked-color: #d9e6ed;
+$icon-size: 16px;
 body{
     line-height: 1.2;
     
@@ -99,9 +108,78 @@ body{
                 }
             }  
         }
-    }
+// Contenedor del switch
+            .container {
+            display: flex;
+            align-items: center;
+            }
+
+// Estilo del switch
+            .switch {
+            position: relative;
+            display: inline-block;
+            width: $slider-width;
+            height: $slider-height;
+
+            input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $slider-color;
+                transition: 0.4s;
+                border-radius: $slider-border-radius;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5px;
+
+                &.round {
+                    border-radius: 50px;
+                }
+
+                .icon {
+                    height: 100%;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 3px;
+                    bottom: 0px;
+                    background-color: $slider-checked-color;
+                    transition: 0.4s;
+                    border-radius: 50%;
+                }
+            }
+
+            input:checked + .slider {
+                background-color: $slider-active-color;
+            }
+
+            input:focus + .slider {
+                box-shadow: 0 0 1px $slider-active-color;
+            }
+
+            input:checked + .slider:before {
+                transform: translateX(32px); // Ajustado para el nuevo tamaño
+            }
+        }
+
+        
+        }
     
-    .mainIndex{
+    .mainIndex{   
         .banner{
             background-image: url('https://visitmexico.com/static/media/videos360.3fb857be2b4fae03c3a3.png');   
             h2{
@@ -187,8 +265,7 @@ body{
                     }
                 }
             }      
-        }
-        
+        }  
     }
     .mainHistory{
         padding: 1rem 8%;
