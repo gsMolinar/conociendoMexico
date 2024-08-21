@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="js/functions.js" defer></script>
+    <script src="js/functions.js" defer></script>  
+    <script src="js/darkMode.js" defer></script>
     <meta name="description" content="Obten informacion importante sobre México, navega y aprende con esta pagina">
     <meta property="og:title" content="Conoce y aprende acerca de Mexico">
     <meta property="og:image" content="https://static.wikia.nocookie.net/maestras-en-accion/images/4/40/CULTURA.jpg/revision/latest?cb=20180726160855&path-prefix=es">
@@ -16,13 +17,13 @@
     <meta property="og:title" content="index.html">
     <title>MéxiConoce</title>
 </head>
-<body>
-    <header>
-        <div>
+<body >
+    <header class="header">
+        <section class="header__logoAndTittle">
             <img src="https://i.pinimg.com/originals/23/23/46/232346b340894ecd5b309af5ecd31a87.png" alt="Logo de la pagina" class="footer__logo" >
-            <h1>México</h1>
-        </div>
-        <div>
+            <h1>MéxiConoce</h1>
+        </section>
+        <section class="header__navAndControls">
             <nav class="navBar">
                 <a href="#" class="navBar__link">Inicio</a>
                 <a href="history.html" class="navBar__link">Historia</a>
@@ -30,7 +31,6 @@
                 <a href="geography.html" class="navBar__link">Geografia</a>
                 <a href="art.html" class="navBar__link">Arte</a>
             </nav>
-            <i class="iconMenu" role="button" aria-label="Abrir menu"><img src="img/burger-menu-svgrepo-com (1).svg" alt="icono de menu" ></i>
             <section class="menu" >
                 <div class="menuHeader">
                     <h2>Menu</h2>
@@ -43,31 +43,24 @@
                     <a href="geography.html" class="navBar__link">Geografia</a>
                     <a href="art.html" class="navBar__link">Arte</a>
                 </nav>
-            </section>
-            
-            
-                
-            <div class="container">
+            </section>    
+            <section class="container">
                 <label class="switch">
                     <input type="checkbox" id="toggle">
                     <span class="slider round">
-                        <span class="icon light"><img src="img/moon-sleep-svgrepo-com.svg" alt=""></span>
-                        <span class="icon dark"><img src="img/sun-svgrepo-com.svg" alt=""></span>
+                        <span class="icon light"><img src="img/moon-sleep-svgrepo-com.svg"></span>
+                        <span class="icon dark"><img src="img/sun-svgrepo.svg"></span>
                     </span>
                 </label>
-            </div>
-            
-            
-        </div>
-             
+            </section>
+            <i class="iconMenu" role="button" aria-label="Abrir menu"><img src="img/burger-menu-svgrepo-com.svg" alt="icono de menu" ></i>
+        </section>     
     </header>
     <main class="mainIndex">
-        
         <section class="banner">
             <h2 class="banner__title">Conoce a México, un pais lleno de cultura</h2>
             <p class="banner__text">Conoce la importancia de la historia y la Geografia de este pais</p>
         </section>
-
         <section class="temes">
             <section class="temes__header">
                 <h2>Temas que puedes explorar la pagina</h2>
@@ -96,8 +89,7 @@
                         <h3>Geografia</h3>
                         <img src="img/mapaAntiguo.jfif" alt="Mapa de Mexico">
                     </article>
-                </a>
-                
+                </a> 
             </section>
         </section> 
     </main>
@@ -110,7 +102,7 @@
         </nav>
         <nav class="navFooter">
             <img src="https://i.pinimg.com/originals/23/23/46/232346b340894ecd5b309af5ecd31a87.png" alt="Logo de la pagina" class="navFooter__logo" >
-            <a href="#" class="navFooter__logo"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo de github"></a>
+            <a href="https://github.com/gsMolinar/conociendoMexico" target="_blank" class="navFooter__logo"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo de github"></a>
         </nav>
     </footer>
 </body>

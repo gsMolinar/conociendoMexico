@@ -1,0 +1,65 @@
+.darkMode{
+    color: $mainColorDarkmode;
+    background-color: $bgColordarkmode;
+    a{
+        color: $mainColorDarkmode;
+    }
+    header, footer{ 
+
+        background-color: $secundaryColorDarkmode;
+        .menu{
+            color: $mainColorDarkmode;
+            background-color: $secundaryColorDarkmode;
+            nav{
+                a{
+                    color: $mainColorDarkmode;
+                }
+            }
+        }
+        .navFooter__link{
+            color: $mainColorDarkmode;
+        }
+
+        
+    }
+    .mainIndex{
+        .temes{
+            .temes__Container {
+                article{
+                    background-color: $secundaryColorDarkmode;
+                }
+            }
+        }
+    }  
+    .mainHistory{
+        .timeLine{
+            ul{
+                li{
+                    background-color: $secundaryColorDarkmode;
+                }
+            }
+        }
+    } 
+    .slider {   
+        background-color: $secundaryColorDarkmode;
+        .slider__controls {
+            button {
+                background-color: $bgColordarkmode;
+                color: $mainColorDarkmode;        
+                &:hover {
+                    background-color: $secundaryColorDarkmode;
+                    color: $mainColorDarkmode;
+                }
+            }
+        }
+    }
+    .mainGeography{
+        .mapSection{
+            .mapSection__info{
+                background-color: $secundaryColorDarkmode;           
+            }
+        }
+    }
+    
+
+}

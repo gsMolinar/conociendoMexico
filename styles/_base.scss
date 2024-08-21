@@ -1,8 +1,19 @@
 $mainMargin: 1rem 8%;
-$greenColor:#48ff48;    
-$whiteColor:#d8d8d8;
-$redColor:#7d0e0e;
-$bgColor:#181818;
+
+$mainColor: #1e1d1d;
+$secundaryColor: #b2b2b2; //usado para headers y foters
+$bgColor: #d4d4d4;
+
+$mainColorDarkmode:#d8d8d8;
+$secundaryColorDarkmode:#121212;
+$bgColordarkmode:#1d1d1d;
+
+$whiteColor: #f1f1f1;
+$blackColor:#212121;
+
+$slider-width: 86px; 
+$slider-height: 26px; 
+$icon-size: 14px;
 @mixin breakpoint1 {
     @media screen and (max-width:62rem) {@content};
 }

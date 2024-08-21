@@ -1,5 +1,3 @@
-
-// Selecciona todos los elementos con la clase "abtnTest"
 const iconMenu = document.querySelector(".iconMenu");
 const menu = document.querySelector(".menu");
 const closeIcon= document.querySelector(".closeIcon");
@@ -21,17 +19,14 @@ elements.forEach(element => {
 elements.forEach(element => {
   element.addEventListener("mouseover", function (event){
     const elementId = event.target.id;
-    const targetElementId = `info-${elementId}`; // Genera el ID del elemento a modificar
-    const targetElement = document.getElementById(targetElementId); // Obtiene el elemento con el ID generado
+    const targetElementId = `info-${elementId}`; 
+    const targetElement = document.getElementById(targetElementId); 
 
-    if (targetElement) { // Verifica si el elemento existe
-      targetElement.classList.add("show"); // Agrega la clase "show"
+    if (targetElement) { 
+      targetElement.classList.add("show"); 
     }
   });
 });
-
-// Para remover la clase "show" al quitar el mouse del elemento:
-
 elements.forEach(element => {
   element.addEventListener("mouseout", function (event){
     const elementId = event.target.id;

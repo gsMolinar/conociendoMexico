@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <script src="js/functions.js" defer></script>
+    <script src="js/darkMode.js" defer></script>
     <meta property="og:title" content="Historia de Mexico">
     <meta name="description" content="Explora el mundo del arte a través de la literatura y la pintura. Descubre obras maestras, autores y artistas icónicos, y sumérgete en la belleza de la expresión artística.">
     <meta property="og:image" content="https://editorialparmenia.com.mx/media/catalog/product/cache/771d65300658bf5a9f479983c14d6bcd/9/7/9786079568078.jpg">
@@ -17,32 +18,43 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <section class="header__logoAndTittle">
             <img src="https://i.pinimg.com/originals/23/23/46/232346b340894ecd5b309af5ecd31a87.png" alt="Logo de la pagina" class="footer__logo" >
             <h1>MéxiConoce</h1>
-        </div>
-        <nav class="navBar">
-            <a href="index.html" class="navBar__link">Inicio</a>
-            <a href="history.html" class="navBar__link">Historia</a>
-            <a href="culture.html" class="navBar__link">Cultura</a>
-            <a href="geography.html" class="navBar__link">Geografia</a>
-            <a href="#" class="navBar__link">Arte</a>
-        </nav>
-        <i class="iconMenu" role="button" aria-label="Abrir menu"><img src="img/burger-menu-svgrepo-com (1).svg" alt="icono de menu" ></i>
-        <section class="menu" >
-            <div class="menuHeader">
-                <h2>Menu</h2>
-                <i class="closeIcon" role="button" aria-label="cerrar menu">x</i>
-            </div>
-            <nav class="menu__nav">
+        </section>
+        <section class="header__navAndControls">
+            <nav class="navBar">
                 <a href="index.html" class="navBar__link">Inicio</a>
                 <a href="history.html" class="navBar__link">Historia</a>
                 <a href="culture.html" class="navBar__link">Cultura</a>
                 <a href="geography.html" class="navBar__link">Geografia</a>
                 <a href="art.html" class="navBar__link">Arte</a>
             </nav>
-        </section>
+            <section class="menu" >
+                <div class="menuHeader">
+                    <h2>Menu</h2>
+                    <i class="closeIcon" role="button" aria-label="cerrar menu">x</i>
+                </div>
+                <nav class="menu__nav">
+                    <a href="#" class="navBar__link">Inicio</a>
+                    <a href="history.html" class="navBar__link">Historia</a>
+                    <a href="culture.html" class="navBar__link">Cultura</a>
+                    <a href="geography.html" class="navBar__link">Geografia</a>
+                    <a href="art.html" class="navBar__link">Arte</a>
+                </nav>
+            </section>    
+            <section class="container">
+                <label class="switch">
+                    <input type="checkbox" id="toggle">
+                    <span class="slider round">
+                        <span class="icon light"><img src="img/moon-sleep-svgrepo-com.svg"></span>
+                        <span class="icon dark"><img src="img/sun-svgrepo.svg"></span>
+                    </span>
+                </label>
+            </section>
+            <i class="iconMenu" role="button" aria-label="Abrir menu"><img src="img/burger-menu-svgrepo-com.svg" alt="icono de menu" ></i>
+        </section>     
     </header>
     <main class="mainArt">
         <h2>Galería</h2>
@@ -99,7 +111,7 @@
         </nav>
         <nav class="navFooter">
             <img src="https://i.pinimg.com/originals/23/23/46/232346b340894ecd5b309af5ecd31a87.png" alt="Logo de la pagina" class="navFooter__logo" >
-            <a href="#" class="navFooter__logo"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo de github"></a>
+            <a href="https://github.com/gsMolinar/conociendoMexico" target="_blank" class="navFooter__logo"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo de github"></a>
         </nav>
 
     </footer>
