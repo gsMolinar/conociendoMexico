@@ -45,15 +45,15 @@
                 </nav>
             </section>    
             <section class="container">
-                <label class="switch">
-                    <input type="checkbox" id="toggle">
+                <label class="switch" role="switch" aria-label="presiona para cambiar modo de visualizacion">
+                    <input type="checkbox" id="toggle" >
                     <span class="slider round">
-                        <span class="icon light"><img src="img/moon-sleep-svgrepo-com.svg"></span>
-                        <span class="icon dark"><img src="img/sun-svgrepo.svg"></span>
+                        <span class="icon light" aria-hidden="true"><img src="img/moon-sleep-svgrepo-com.svg"></span>
+                        <span class="icon dark" aria-hidden="true"><img src="img/sun-svgrepo.svg"></span>
                     </span>
                 </label>
             </section>
-            <i class="iconMenu" role="button" aria-label="Abrir menu"><img src="img/burger-menu-svgrepo-com.svg" alt="icono de menu" ></i>
+            <i class="iconMenu" role="button" aria-label="Abrir menu"><img src="img/burger-menu-svgrepo-com.svg" ></i>
         </section>     
     </header>
     <main class="mainIndex">
@@ -66,25 +66,25 @@
                 <h2>Temas que puedes explorar la pagina</h2>
             </section>
             <section class="temes__Container">
-                <a href="history.html" class="container__linkBox">
+                <a href="history.html" class="container__linkBox" role="link" aria-label="presiona para ir a la pagina de Historia">
                     <article>
                         <h3>Historia</h3>
                         <img src="img/muralIndependecia.jpg" alt="Mural de la independecia">
                     </article>
                 </a>
-                <a href="culture.html" class="container__linkBox">
+                <a href="culture.html" class="container__linkBox"role="link" aria-label="presiona para ir a la pagina de Cultura">
                     <article>
                         <h3>Cultura </h3>
                         <img src="img/diaDeMuertos.webp" alt="Dia de muertos">
                     </article>
                 </a>
-                <a href="art.html"class="container__linkBox">
+                <a href="art.html"class="container__linkBox" role="link" aria-label="presiona para ir a la pagina de arte">
                     <article>
                         <h3>Arte</h3>
                         <img src="img/pintura.jpg" alt="pintura de Arturo">
                     </article>
                 </a>
-                <a href="geography.html" class="container__linkBox">
+                <a href="geography.html" class="container__linkBox" role="link" aria-label="presiona para ir a la pagina de geografia">
                     <article>
                         <h3>Geografia</h3>
                         <img src="img/mapaAntiguo.jfif" alt="Mapa de Mexico">
@@ -101,8 +101,8 @@
             <a href="geography.html" class="navFooter__link">Geografia </a>
         </nav>
         <nav class="navFooter">
-            <img src="https://i.pinimg.com/originals/23/23/46/232346b340894ecd5b309af5ecd31a87.png" alt="Logo de la pagina" class="navFooter__logo" >
-            <a href="https://github.com/gsMolinar/conociendoMexico" target="_blank" class="navFooter__logo"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo de github"></a>
+            <img src="https://i.pinimg.com/originals/23/23/46/232346b340894ecd5b309af5ecd31a87.png" alt="Logo de MéxiConoce" class="navFooter__logo" >
+            <a href="https://github.com/gsMolinar/conociendoMexico" target="_blank" class="navFooter__logo"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo de github" role="link"></a>
         </nav>
     </footer>
 </body>

@@ -45,11 +45,11 @@
                 </nav>
             </section>    
             <section class="container">
-                <label class="switch">
-                    <input type="checkbox" id="toggle">
+                <label class="switch" role="switch" aria-label="presiona para cambiar modo de visualizacion">
+                    <input type="checkbox" id="toggle" >
                     <span class="slider round">
-                        <span class="icon light"><img src="img/moon-sleep-svgrepo-com.svg"></span>
-                        <span class="icon dark"><img src="img/sun-svgrepo.svg"></span>
+                        <span class="icon light" aria-hidden="true"><img src="img/moon-sleep-svgrepo-com.svg"></span>
+                        <span class="icon dark" aria-hidden="true"><img src="img/sun-svgrepo.svg"></span>
                     </span>
                 </label>
             </section>
@@ -75,8 +75,8 @@
                 <p>Autor: Carmen Mondragon </p>
             </article>
             <div class="slider__controls">
-                <button id="prev1">&lt;</button>
-                <button id="next1">&gt;</button>
+                <button id="prev1" aria-label="Regresar a contenido Anterior">&lt;</button>
+                <button id="next1" aria-label="ver contenido siguinte">&gt;</button>
             </div>
         </section>
         <h2>Literatura</h2>
@@ -97,8 +97,8 @@
                 <p>Laura Ezquivel</p>
             </article>
             <div class="slider__controls">
-                <button id="prev2">&lt;</button>
-                <button id="next2">&gt;</button>
+                <button id="prev2" aria-label="presiona para regresar a contenido anterior">&lt;</button>
+                <button id="next2" aria-label="presiona para pasar siguiente contenido">&gt;</button>
             </div>
         </section>
     </main>

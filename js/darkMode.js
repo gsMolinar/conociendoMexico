@@ -1,5 +1,3 @@
-
-
 document.getElementById('toggle').addEventListener('change', function () {
     if (this.checked) {
         document.body.classList.add('darkMode');
